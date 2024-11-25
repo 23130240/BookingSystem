@@ -14,21 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>data/Gt.jng.png</name>
-			<type>1</type>
-			<location>C:/Users/admin/Pictures/Gt.jng.png</location>
-		</link>
-		<link>
-			<name>data/Qr.png</name>
-			<type>1</type>
-			<location>C:/Users/admin/Pictures/Qr.png</location>
-		</link>
-		<link>
-			<name>data/avt.jng.jpg</name>
-			<type>1</type>
-			<location>C:/Users/admin/Pictures/avt.jng.jpg</location>
-		</link>
-	</linkedResources>
 </projectDescription>

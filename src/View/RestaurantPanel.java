@@ -1,7 +1,10 @@
 package View;	
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 
 public class RestaurantPanel extends JPanel {
     public RestaurantPanel() {
@@ -45,6 +48,81 @@ public class RestaurantPanel extends JPanel {
 
         return panel;
     }
+    
+//    private JPanel createRecommendedPanel() {
+//        JPanel recommendedPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 15, 15)); // Layout để hiển thị các mục
+//        recommendedPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+//
+//        // Tạo danh sách các mục gợi ý
+//        String[][] items = {
+//            {"Ưu đãi nhà hàng Lẩu Nướng tại TP.HCM", "data/lau.jpg", "16", "Lẩu Nướng"},
+//            {"Ưu đãi nhà hàng Việt Nam tại Tp.HCM", "data/nhieumon.jpg", "38", "Việt Nam"},
+//            {"Ưu đãi nhà hàng Chay tại Tp.HCM", "data/chay.jpg", "6", "Chay"},
+//            {"Khám phá tất cả Nhà hàng có ưu đãi tại Tp.HCM", "data/khampha.jpg", "152", "Khám phá"},
+//            {"Các Nhà hàng Hải Sản Tp.HCM tại nhiều mức giá", "data/buffet.jpg", "5", "Hải sản"}
+//        };
+//
+//        for (String[] item : items) {
+//            recommendedPanel.add(createItemPanel(item[0], item[1], item[2], item[3]));
+//        }
+//
+//        return recommendedPanel;
+//    }
+//
+//    private JPanel createItemPanel(String title, String imagePath, String score, String type) {
+//        JPanel itemPanel = new JPanel(new BorderLayout());
+//        itemPanel.setPreferredSize(new Dimension(200, 250));
+//        itemPanel.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
+//
+//        // Thêm hình ảnh
+//        JLabel lblImage = new JLabel();
+//        lblImage.setHorizontalAlignment(SwingConstants.CENTER);
+//        try {
+//            Image img = ImageIO.read(new File(imagePath));
+//            ImageIcon icon = new ImageIcon(img.getScaledInstance(200, 120, Image.SCALE_SMOOTH));
+//            lblImage.setIcon(icon);
+//        } catch (IOException ex) {
+//            lblImage.setText("Không tải được ảnh");
+//        }
+//        lblImage.setCursor(new Cursor(Cursor.HAND_CURSOR));
+//        lblImage.addMouseListener(new MouseAdapter() {
+//            @Override
+//            public void mouseClicked(MouseEvent e) {
+//                showRestaurantDetail(type); // Hiển thị trang chi tiết
+//            }
+//        });
+//
+//        // Thêm tiêu đề
+//        JLabel lblTitle = new JLabel(title, SwingConstants.CENTER);
+//        lblTitle.setFont(new Font("Serif", Font.BOLD, 14));
+//        lblTitle.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+//        lblTitle.setCursor(new Cursor(Cursor.HAND_CURSOR));
+//        lblTitle.addMouseListener(new MouseAdapter() {
+//            @Override
+//            public void mouseClicked(MouseEvent e) {
+//                showRestaurantDetail(type); // Hiển thị trang chi tiết
+//            }
+//        });
+//
+//        // Thêm điểm
+//        JLabel lblScore = new JLabel("Số điểm đến: " + score, SwingConstants.CENTER);
+//        lblScore.setFont(new Font("SansSerif", Font.PLAIN, 12));
+//
+//        // Sắp xếp các thành phần
+//        itemPanel.add(lblImage, BorderLayout.NORTH);
+//        itemPanel.add(lblTitle, BorderLayout.CENTER);
+//        itemPanel.add(lblScore, BorderLayout.SOUTH);
+//
+//        return itemPanel;
+//    }
+//
+//    private void showRestaurantDetail(String type) {
+//        // Chuyển sang trang chi tiết của nhà hàng tương ứng
+//        JOptionPane.showMessageDialog(this, "Xem thông tin chi tiết nhà hàng: " + type, "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+//
+//        // Hoặc chuyển CardLayout sang trang chi tiết:
+//        cardLayout.show(mainPanel, "RestaurantDetail"); // Cần thêm panel "RestaurantDetail" trước đó
+//    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Danh sách nhà hàng");
